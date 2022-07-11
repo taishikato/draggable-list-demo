@@ -1,0 +1,25 @@
+{
+  "name": "new",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://codesandbox.io/s/new",
+  "main": "src/index.js",
+  "dependencies": {
+    "lodash-es": "4.17.11",
+    "lodash-move": "1.1.1",
+    "react": "16.8.0",
+    "react-dom": "16.8.0",
+    "react-scripts": "2.0.3",
+    "react-spring": "8.0.1",
+    "react-with-gesture": "4.0.0",
+    "styled-components": "4.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
