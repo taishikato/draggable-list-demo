@@ -7,12 +7,12 @@
   "main": "src/index.js",
   "dependencies": {
     "@react-spring/web": "^9.4.5",
+    "@use-gesture/react": "^10.2.16",
     "lodash-es": "4.17.11",
     "lodash-move": "1.1.1",
     "react": "16.8.0",
     "react-dom": "16.8.0",
     "react-scripts": "2.0.3",
-    "react-with-gesture": "4.0.0",
     "styled-components": "4.1.2"
   },
   "scripts": {

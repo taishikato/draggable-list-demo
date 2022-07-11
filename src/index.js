@@ -4,7 +4,7 @@ import { render } from 'react-dom'
 import React, { useRef } from 'react'
 import clamp from 'lodash-es/clamp'
 import swap from 'lodash-move'
-import { useGesture } from 'react-with-gesture'
+import { useDrag } from '@use-gesture/react'
 import { useSprings, animated, to } from '@react-spring/web'
 import './styles.css'
 
@@ -31,7 +31,7 @@ const DraggableList = ({ items }) => {
   */
   const [springs, api] = useSprings(items.length, fn(order.current))
 
-  const bind = useGesture(({ args: [originalIndex], down, delta: [, y] }) => {
+  const bind = useDrag(({ args: [originalIndex], down, movement: [, y] }) => {
     const curIndex = order.current.indexOf(originalIndex)
     const curRow = clamp(Math.round((curIndex * 100 + y) / 100), 0, items.length - 1)
     const newOrder = swap(order.current, curIndex, curRow)
@@ -54,27 +54,13 @@ const DraggableList = ({ items }) => {
             style={{
               zIndex,
               boxShadow: shadow.to(s => `rgba(0, 0, 0, 0.15) 0px ${s}px ${2 * s}px 0px`),
-              transform: to([y, scale], (y, s) => `translate3d(0,${y}px,0) scale(${s})`)
+              transform: to([y, scale], (y, s) => `translate3d(0,${y}px,0) scale(${s})`),
+              touchAction: 'none'
             }}
             children={items[i]}
           />
         ))}
       </div>
-      {/* <div>==========</div>
-      <div className="content" style={{ height: items.length * 100 }}>
-        {springs.map(({ zIndex, shadow, y, scale }, i) => (
-          <div
-            {...bind(i)}
-            key={i}
-            style={{
-              zIndex,
-              boxShadow: shadow.to(s => `rgba(0, 0, 0, 0.15) 0px ${s}px ${2 * s}px 0px`),
-              transform: to([y, scale], (y, s) => `translate3d(0,${y}px,0) scale(${s})`)
-            }}>
-            yoyo
-          </div>
-        ))}
-      </div> */}
     </>
   )
 }
