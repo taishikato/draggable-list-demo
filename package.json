@@ -11,15 +11,20 @@
     "react": "16.8.0",
     "react-dom": "16.8.0",
     "react-scripts": "2.0.3",
-    "react-spring": "8.0.1",
+    "react-spring": "9.4.5",
     "react-with-gesture": "4.0.0",
     "styled-components": "4.1.2"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
