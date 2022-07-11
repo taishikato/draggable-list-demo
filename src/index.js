@@ -5,7 +5,7 @@ import React, { useRef } from 'react'
 import clamp from 'lodash-es/clamp'
 import swap from 'lodash-move'
 import { useGesture } from 'react-with-gesture'
-import { useSprings, animated, to } from 'react-spring'
+import { useSprings, animated, to } from '@react-spring/web'
 import './styles.css'
 
 // WHEN dragging, this function will be fed with all arguments.
