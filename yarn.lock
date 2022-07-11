@@ -1829,6 +1829,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^18.0.3":
+  version: 18.0.3
+  resolution: "@types/node@npm:18.0.3"
+  checksum: 5dec59fbbc1186c808b53df1ca717dad034dbd6a901c75f5b052c845618b531b05f27217122c6254db99529a68618e4cfc534ae3dbf4e88754e9e572df80defa
+  languageName: node
+  linkType: hard
+
 "@types/q@npm:^1.5.1":
   version: 1.5.5
   resolution: "@types/q@npm:1.5.5"
@@ -1840,6 +1847,24 @@ __metadata:
   version: 1.0.2
   resolution: "@types/tapable@npm:1.0.2"
   checksum: 323e5ce7c32920fb1ad2a645554d8021f34fca1dd524420509c9b0a6d62dac71478267cb37d1e6799825c0b46c128f2f628422df0304bf349e26d1b81324264a
+  languageName: node
+  linkType: hard
+
+"@use-gesture/core@npm:10.2.16, @use-gesture/core@npm:^10.2.16":
+  version: 10.2.16
+  resolution: "@use-gesture/core@npm:10.2.16"
+  checksum: f9ee9023a4384e49e2bc342a97b63a7858b58ca6e9cf838233c054c533e84f43928d57115e0b012c735cc6421c6c18ec0b5baee77f50e31ce6b4d34cab4f2135
+  languageName: node
+  linkType: hard
+
+"@use-gesture/react@npm:^10.2.16":
+  version: 10.2.16
+  resolution: "@use-gesture/react@npm:10.2.16"
+  dependencies:
+    "@use-gesture/core": 10.2.16
+  peerDependencies:
+    react: ">= 16.8.0"
+  checksum: d0a2a06f7e02e7fb4b034c198253eb47e07cf826b1c15dc87002665f87ca19b5516851faab0e8f8ac84eb5e41e04bca4bc85f68f488bec7240f0782b792930cc
   languageName: node
   linkType: hard
 
@@ -9827,12 +9852,14 @@ __metadata:
   resolution: "new@workspace:."
   dependencies:
     "@react-spring/web": ^9.4.5
+    "@types/node": ^18.0.3
+    "@use-gesture/core": ^10.2.16
+    "@use-gesture/react": ^10.2.16
     lodash-es: 4.17.11
     lodash-move: 1.1.1
     react: 16.8.0
     react-dom: 16.8.0
     react-scripts: 2.0.3
-    react-with-gesture: 4.0.0
     styled-components: 4.1.2
   languageName: unknown
   linkType: soft
@@ -12051,17 +12078,6 @@ __metadata:
   bin:
     react-scripts: ./bin/react-scripts.js
   checksum: b773db04de7fafe49df0ea418aabf3890a44f1206786f2e5152e823a54dddec9abf49b2002c77d2b1a6b3d98deb3363efc8ce02013ef595a06de5c0b55639e1b
-  languageName: node
-  linkType: hard
-
-"react-with-gesture@npm:4.0.0":
-  version: 4.0.0
-  resolution: "react-with-gesture@npm:4.0.0"
-  peerDependencies:
-    prop-types: 15.x.x
-    react: ">= 16.0.0"
-    react-dom: ">= 16.0.0"
-  checksum: 21bd17c3c9552e97efdcf5b49d2baa3d2e4d080f80c98985df995f8174a6fb58e9734b9d910e4690d34c88d7f215f0371642cd7281e50078ad5b496371193da0
   languageName: node
   linkType: hard
 
